@@ -1,0 +1,8 @@
+#N canvas 1236 466 550 489.063 10;
+#X obj 30 30 adc~;
+#X obj 30 110 send micVolume;
+#X floatatom 130 110 5 0 0 0 - - -, f 5;
+#X obj 30 70 env~ 16384 8192;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 2 0;

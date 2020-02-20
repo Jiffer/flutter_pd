@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.niusounds.flutter_pd">
+
+  <application>
+    <service android:name="org.puredata.android.service.PdService" />
+  </application>
+
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+</manifest>

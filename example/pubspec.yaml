@@ -1,0 +1,27 @@
+name: flutter_pd_example
+description: Demonstrates how to use the flutter_pd plugin.
+publish_to: 'none'
+
+environment:
+  sdk: '>=2.1.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_pd:
+    path: ../
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/microphone_level.pd
+    - assets/simple_sin.pd
+    - assets/simple_sin_with_volume.pd

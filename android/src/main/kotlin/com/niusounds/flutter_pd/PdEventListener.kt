@@ -22,7 +22,7 @@ class PdEventListener(id: Int,
         "type" to "message",
         "from" to source,
         "symbol" to symbol,
-        "value" to args.asList()
+        "args" to args.asList()
     ))
   }
 

@@ -43,18 +43,7 @@ class FlutterPd {
     );
   }
 
-  Future<int> openFromZip({
-    @required String zipAssetPath,
-    @required String patchPathInZip,
-    @required bool overwrite,
-  }) {
-    return channel.invokeMethod('openFromZip', {
-      'zipAssetPath': zipAssetPath,
-      patchPathInZip: patchPathInZip,
-      overwrite: overwrite,
-    });
-  }
-
+  /// Should only be called from [PdFileHandle.close]. Do not call this directly.
   Future<void> close(int patchHandle) {
     return channel.invokeMethod('close', patchHandle);
   }

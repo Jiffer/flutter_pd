@@ -20,7 +20,7 @@ void main() {
   });
 
   test('checkPermission', () async {
-    List<MethodCall> calls = [];
+    final List<MethodCall> calls = [];
     channel.setMockMethodCallHandler((MethodCall call) async {
       calls.add(call);
       return true;
@@ -33,7 +33,7 @@ void main() {
   });
 
   test('startPd', () async {
-    List<MethodCall> calls = [];
+    final List<MethodCall> calls = [];
     channel.setMockMethodCallHandler((MethodCall call) async {
       calls.add(call);
       return 1;
@@ -47,7 +47,7 @@ void main() {
   });
 
   test('stopPd', () async {
-    List<MethodCall> calls = [];
+    final List<MethodCall> calls = [];
     channel.setMockMethodCallHandler((MethodCall call) async {
       calls.add(call);
       return 1;
@@ -61,7 +61,7 @@ void main() {
   });
 
   test('openAsset', () async {
-    List<MethodCall> calls = [];
+    final List<MethodCall> calls = [];
     channel.setMockMethodCallHandler((MethodCall call) async {
       calls.add(call);
       return 42;
@@ -83,7 +83,7 @@ void main() {
   });
 
   test('startAudio', () async {
-    List<MethodCall> calls = [];
+    final List<MethodCall> calls = [];
     channel.setMockMethodCallHandler((MethodCall call) async {
       calls.add(call);
     });
@@ -96,7 +96,7 @@ void main() {
   });
 
   test('startAudio with argument', () async {
-    List<MethodCall> calls = [];
+    final List<MethodCall> calls = [];
     channel.setMockMethodCallHandler((MethodCall call) async {
       calls.add(call);
     });
@@ -109,7 +109,7 @@ void main() {
   });
 
   test('send', () async {
-    List<MethodCall> calls = [];
+    final List<MethodCall> calls = [];
     channel.setMockMethodCallHandler((MethodCall call) async {
       calls.add(call);
     });

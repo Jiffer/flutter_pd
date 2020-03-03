@@ -3,13 +3,13 @@ abstract class PdEvent {
 
   const PdEvent(this.from);
 
-  static PdEvent fromNativeEvent(event) {
+  static PdEvent fromNativeEvent(dynamic event) {
     if (event is! Map) {
       return null;
     }
 
-    final type = event['type'];
-    final from = event['from'];
+    final String type = event['type'];
+    final String from = event['from'];
     switch (type) {
       case 'float':
         return FloatEvent(from, event['value']);

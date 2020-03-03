@@ -36,7 +36,7 @@ class FlutterPd {
   }
 
   Future<PdFileHandle> openAsset(String pdFileAssetPath) async {
-    final handle = await channel.invokeMethod('openAsset', pdFileAssetPath);
+    final int handle = await channel.invokeMethod('openAsset', pdFileAssetPath);
     return PdFileHandle(
       handle: handle,
       pd: this,

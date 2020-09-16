@@ -76,6 +76,15 @@ public class SwiftFlutterPdPlugin: NSObject, FlutterPlugin {
       audioController?.print()
       result(nil)
     case "send":
+      guard let args = call.arguments as? [String: Any?],
+        let receiver = args["receiver"] as? String,
+        let value = args["value"] as? Double
+      else {
+        result(nil)
+        return
+      }
+
+      PdBase.send(Float(value), toReceiver: receiver)
       result(nil)
     default:
       result(FlutterMethodNotImplemented)

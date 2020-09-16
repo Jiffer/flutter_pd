@@ -2,18 +2,24 @@ import Flutter
 import UIKit
 import libpd_ios
 
-public class SwiftFlutterPdPlugin: NSObject, FlutterPlugin {
+public class SwiftFlutterPdPlugin: NSObject, FlutterPlugin, FlutterStreamHandler, PdListener {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(
       name: "flutter_pd/method",
       binaryMessenger: registrar.messenger()
     )
+    let eventChannel = FlutterEventChannel(
+      name: "flutter_pd/event",
+      binaryMessenger: registrar.messenger()
+    )
     let instance = SwiftFlutterPdPlugin(registrar: registrar)
     registrar.addMethodCallDelegate(instance, channel: channel)
+    eventChannel.setStreamHandler(instance)
   }
 
   private let registrar: FlutterPluginRegistrar
   private var audioController: PdAudioController?
+    private var dispatcher: PdDispatcher?
   private var fileHandles: [Int: UnsafeMutableRawPointer] = [:]
 
   public init(registrar: FlutterPluginRegistrar) {
@@ -27,6 +33,8 @@ public class SwiftFlutterPdPlugin: NSObject, FlutterPlugin {
       result(true)
     case "startPd":
       audioController = PdAudioController()
+      dispatcher = PdDispatcher()
+      PdBase.setDelegate(dispatcher)
       result(nil)
     case "stopPd":
       audioController = nil
@@ -89,5 +97,32 @@ public class SwiftFlutterPdPlugin: NSObject, FlutterPlugin {
     default:
       result(FlutterMethodNotImplemented)
     }
+  }
+  public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink)
+    -> FlutterError?
+  {
+    guard let args = arguments as? [String: Any?],
+      let symbol = args["symbol"] as? String,
+      let id = args["id"] as? Int
+    else {
+      return FlutterError(code: "invalid arguments", message: "", details: nil)
+    }
+    
+    dispatcher?.add(PdEventListener(id: id, callback: events), forSource: symbol)
+    return nil
+  }
+
+  public func onCancel(withArguments arguments: Any?) -> FlutterError? {
+    guard let args = arguments as? [String: Any?],
+      let symbol = args["symbol"] as? String,
+      let id = args["id"] as? Int
+    else {
+      return FlutterError(code: "invalid arguments", message: "", details: nil)
+    }
+    
+    if let listener = PdEventListener.remove(id: id) {
+        dispatcher?.remove(listener, forSource: symbol)
+    }
+    return nil
   }
 }

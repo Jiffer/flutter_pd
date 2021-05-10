@@ -14,6 +14,8 @@ interface DartToNative {
 
   fun openAsset(assetName: String): Int
 
+  fun openZAsset(assetName: String): Int
+
   fun close(patchHandle: Int)
 
   fun startAudio(requireInput: Boolean)

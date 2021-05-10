@@ -43,6 +43,14 @@ class FlutterPd {
     );
   }
 
+  Future<PdFileHandle> openZAsset(String pdFileAssetPath) async {
+    final int handle = await channel.invokeMethod('openZAsset', pdFileAssetPath);
+    return PdFileHandle(
+      handle: handle,
+      pd: this,
+    );
+  }
+
   /// Should only be called from [PdFileHandle.close]. Do not call this directly.
   Future<void> close(int patchHandle) {
     return channel.invokeMethod('close', patchHandle);

@@ -1,45 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="flutter_pd.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/flutter_pd.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="ChangeListManager">
+    <list default="true" id="73431833-82a5-4974-8dd3-7efe9cfd44b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/DartCallHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/DartCallHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/DartToNative.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/DartToNative.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/FlutterPd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/FlutterPd.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/impl/PdImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/impl/PdImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/.last_build_id" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/.last_build_id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_pd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_pd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/flutter_pd.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter_pd.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ToolWindowManager">
-    <editor active="true" />
-    <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-    </layout>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <option name="show-excluded-files" value="false" />
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1hvZR8Ph2bOzMpMlgKA0TvKISTa" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73431833-82a5-4974-8dd3-7efe9cfd44b8" name="Default Changelist" comment="" />
+      <created>1600893514415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600893514415</updated>
+      <workItem from="1600893517185" duration="1000" />
+      <workItem from="1600893522035" duration="1841000" />
+      <workItem from="1600976155112" duration="3964000" />
+      <workItem from="1601394775249" duration="502000" />
+      <workItem from="1601735708858" duration="182000" />
+      <workItem from="1601929918162" duration="8000" />
+      <workItem from="1602869688343" duration="8498000" />
+      <workItem from="1603202965607" duration="1096000" />
+      <workItem from="1603387749305" duration="586000" />
+      <workItem from="1603388458110" duration="707000" />
+      <workItem from="1603398793282" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="627" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1601913747573">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="627" y="170" key="com.intellij.ide.util.TipDialog/0.23.1440.877/1440.-62.1600.877@0.23.1440.877" timestamp="1601913747573" />
+    <state x="470" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/1440.-62.1920.1057@0.23.1440.877" timestamp="1600979756033" />
+    <state x="1840" y="173" width="782" height="518" key="find.popup" timestamp="1602872960603">
+      <screen x="1440" y="-62" width="1600" height="877" />
+    </state>
+    <state x="1840" y="173" width="782" height="518" key="find.popup/0.23.1440.877/1440.-62.1600.877@1440.-62.1600.877" timestamp="1602872960603" />
+    <state x="360" y="258" width="703" height="518" key="find.popup/0.23.1440.877/1440.-62.1920.1057@0.23.1440.877" timestamp="1600983793919" />
   </component>
 </project>

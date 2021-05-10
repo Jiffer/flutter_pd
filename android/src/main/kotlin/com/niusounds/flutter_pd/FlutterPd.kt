@@ -6,6 +6,9 @@ import com.niusounds.flutter_pd.util.RequestPermissionHandler
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import java.io.File
 import java.io.IOException
+import org.puredata.android.io.PdAudio;
+import org.puredata.core.PdBase;
+import org.puredata.core.utils.IoUtils;
 
 class FlutterPd(private val context: Context,
                 private val assetPathResolver: AssetPathResolver,
@@ -61,6 +64,20 @@ class FlutterPd(private val context: Context,
       throw PdException("openAsset failed", e.message)
     }
   }
+
+  override fun openZAsset(assetName: String): Int {
+      //IoUtils.extractZipResource(context.getResources().openRawResource(R.raw.assetName), patchDir, true);
+      try {
+        val patchDir = File(context.cacheDir, "flutter_pd").also { if (!it.exists()) it.mkdirs() }
+        val tmpFile = File(patchDir, "tmp.pd")
+        context.assets.open(assetPathResolver.resolve(assetName)).use {
+          it.copyTo(tmpFile.outputStream())
+        }
+        return pd.openPatch(tmpFile)
+      } catch (e: IOException) {
+        throw PdException("openAsset failed", e.message)
+      }
+    }
 
   override fun close(patchHandle: Int) {
     pd.closePatch(patchHandle)

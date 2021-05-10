@@ -34,6 +34,12 @@ class DartCallHandler(delegate: DartToNative) : MethodChannel.MethodCallHandler,
           result.success(openAsset(pdFileAssetPath))
         }
 
+        "openZAsset" -> {
+          val pdFileAssetPath = call.arguments as? String
+                  ?: throw PdException("argument is missing", "openZAsset() require an argument String")
+          result.success(openZAsset(pdFileAssetPath))
+        }
+
         "close" -> {
           val patchHandle = call.arguments as? Int
               ?: throw PdException("argument is missing", "close() require an argument Int")

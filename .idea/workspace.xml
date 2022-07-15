@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73431833-82a5-4974-8dd3-7efe9cfd44b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_for_Android.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/DartCallHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/DartCallHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/DartToNative.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/DartToNative.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/FlutterPd.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/FlutterPd.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/impl/PdImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/niusounds/flutter_pd/impl/PdImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/.last_build_id" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/.last_build_id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_pd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_pd.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/flutter_pd.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/flutter_pd.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +21,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />
@@ -66,22 +58,23 @@
       <workItem from="1603387749305" duration="586000" />
       <workItem from="1603388458110" duration="707000" />
       <workItem from="1603398793282" duration="6000" />
+      <workItem from="1657906263253" duration="125000" />
     </task>
+    <task id="LOCAL-00001" summary="trdt">
+      <created>1657906346480</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657906346480</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="627" y="170" key="com.intellij.ide.util.TipDialog" timestamp="1601913747573">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="627" y="170" key="com.intellij.ide.util.TipDialog/0.23.1440.877/1440.-62.1600.877@0.23.1440.877" timestamp="1601913747573" />
-    <state x="470" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/1440.-62.1920.1057@0.23.1440.877" timestamp="1600979756033" />
-    <state x="1840" y="173" width="782" height="518" key="find.popup" timestamp="1602872960603">
-      <screen x="1440" y="-62" width="1600" height="877" />
-    </state>
-    <state x="1840" y="173" width="782" height="518" key="find.popup/0.23.1440.877/1440.-62.1600.877@1440.-62.1600.877" timestamp="1602872960603" />
-    <state x="360" y="258" width="703" height="518" key="find.popup/0.23.1440.877/1440.-62.1920.1057@0.23.1440.877" timestamp="1600983793919" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="trdt" />
+    <option name="LAST_COMMIT_MESSAGE" value="trdt" />
   </component>
 </project>

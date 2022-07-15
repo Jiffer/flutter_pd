@@ -17,7 +17,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+
   final _flutterPdPlugin = FlutterPd();
   PdFileHandle? _pdFileHandle; // todo: make non-nullable?
   final _assetPath = 'assets/simple_sin_with_volume.pd';

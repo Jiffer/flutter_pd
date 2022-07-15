@@ -3,7 +3,7 @@ abstract class PdEvent {
 
   const PdEvent(this.from);
 
-  static PdEvent fromNativeEvent(dynamic event) {
+  static PdEvent? fromNativeEvent(dynamic event) {
     if (event is! Map) {
       return null;
     }

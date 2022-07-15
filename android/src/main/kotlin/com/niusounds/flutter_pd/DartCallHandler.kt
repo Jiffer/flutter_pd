@@ -44,7 +44,8 @@ class DartCallHandler(delegate: DartToNative) : MethodChannel.MethodCallHandler,
 
         "startAudio" -> {
           val requireInput = call.argument<Boolean>("requireInput") ?: true
-          startAudio(requireInput)
+          val restart = call.argument<Boolean>("restart") ?: false
+          startAudio(requireInput, restart)
           result.success(null)
         }
 

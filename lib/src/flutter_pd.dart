@@ -56,6 +56,15 @@ class FlutterPd {
     });
   }
 
+  Future<void> restartAudio({
+    bool requireInput,
+  }) {
+    return channel.invokeMethod('startAudio', {
+      'requireInput': requireInput,
+      'restart': true,
+    });
+  }
+
   Future<void> send(String receiverName, double value) {
     return channel.invokeMethod('send', {
       'receiver': receiverName,

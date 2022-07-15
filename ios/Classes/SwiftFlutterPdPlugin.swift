@@ -78,7 +78,7 @@ public class SwiftFlutterPdPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
         withSampleRate: 44100,
         numberChannels: 2,
         inputEnabled: requireInput,
-        mixingEnabled: false
+        mixingEnabled: true
       )
       audioController?.isActive = true
       audioController?.print()

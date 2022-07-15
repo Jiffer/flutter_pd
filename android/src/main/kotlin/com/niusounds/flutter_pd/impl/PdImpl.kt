@@ -58,11 +58,22 @@ class PdImpl(private val context: Context) : Pd {
     pdService = null
   }
 
-  override fun initAudio(requireInput: Boolean) {
+  override fun initAudio(requireInput: Boolean, restart: Boolean) {
     if (requireInput) {
-      pdService?.initAudio(-1, -1, -1, -1f)
+      if(restart) {
+        pdService?.initAudio(-1, -1, -1, -1f)
+//        pdService?.initAudio(-1, -1, -1, -1f, 1)
+      }else{
+        pdService?.initAudio(-1, -1, -1, -1f)
+      }
     } else {
-      pdService?.initAudio(-1, 0, -1, -1f)
+      if(restart) {
+        pdService?.initAudio(-1, 0, -1, -1f)
+//        pdService?.initAudio(-1, 0, -1, -1f, 1)
+      }
+      else{
+        pdService?.initAudio(-1, 0, -1, -1f)
+      }
     }
   }
 

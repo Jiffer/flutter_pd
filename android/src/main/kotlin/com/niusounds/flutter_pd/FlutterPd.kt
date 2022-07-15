@@ -66,13 +66,13 @@ class FlutterPd(private val context: Context,
     pd.closePatch(patchHandle)
   }
 
-  override fun startAudio(requireInput: Boolean) {
+  override fun startAudio(requireInput: Boolean, restart: Boolean) {
     if (pd.isRunning.not()) {
       throw PdException("PdService is not started", "call start() first.")
     }
 
     return try {
-      pd.initAudio(requireInput)
+      pd.initAudio(requireInput, restart)
       pd.startAudio()
     } catch (e: Exception) {
       throw PdException("startAudio failed", e.message, null)

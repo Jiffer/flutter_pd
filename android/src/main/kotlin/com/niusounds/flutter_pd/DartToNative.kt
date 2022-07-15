@@ -16,7 +16,7 @@ interface DartToNative {
 
   fun close(patchHandle: Int)
 
-  fun startAudio(requireInput: Boolean)
+  fun startAudio(requireInput: Boolean, restart: Boolean)
 
   fun send(receiver: String, value: Float)
 

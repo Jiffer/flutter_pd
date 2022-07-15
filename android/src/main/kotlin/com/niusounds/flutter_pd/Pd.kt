@@ -30,7 +30,7 @@ interface Pd {
   /**
    * Initialize audio. If microphone is required to run patch, set [requireInput] to true.
    */
-  fun initAudio(requireInput: Boolean)
+  fun initAudio(requireInput: Boolean, restart: Boolean)
 
   /**
    * Start audio processing.

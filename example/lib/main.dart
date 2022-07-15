@@ -19,8 +19,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
   final _flutterPdPlugin = FlutterPd();
-  PdFileHandle? _pdFileHandle; // todo: make non-nullable
-  final _assetPath = 'assets/simple_sin.pd';
+  PdFileHandle? _pdFileHandle; // todo: make non-nullable?
+  final _assetPath = 'assets/simple_sin_with_volume.pd';
 
   @override
   void initState() {
@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     String platformVersion;
     await _flutterPdPlugin.startPd();
-    print("calling openAsset");
+
     _pdFileHandle = await _flutterPdPlugin.openAsset(_assetPath);
 
     await _flutterPdPlugin.startAudio(
@@ -40,34 +40,32 @@ class _MyAppState extends State<MyApp> {
     );
 
     return;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
-    try {
-      platformVersion = 'not doing that';
-          //await _flutterPdPlugin.startPd();
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
+  }
 
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
+  double sliderVal = 0.5;
+  void onChanged(double newVal){
+    _flutterPdPlugin.send("volume", newVal);
     setState(() {
-      _platformVersion = platformVersion;
+      sliderVal = newVal;
     });
   }
 
   @override
   Widget build(BuildContext context) {
+
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Column(
+            children: [
+              Text('Running on: $_platformVersion\n'),
+              Slider(min: 0, max: 1, value: sliderVal, onChanged: onChanged)
+            ],
+          ),
         ),
       ),
     );

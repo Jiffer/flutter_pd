@@ -6,13 +6,7 @@ import com.niusounds.flutter_pd.util.RequestPermissionHandler
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 import java.io.File
 import java.io.IOException
-<<<<<<< Updated upstream
-import org.puredata.android.io.PdAudio;
-import org.puredata.core.PdBase;
-import org.puredata.core.utils.IoUtils;
-=======
 import android.util.Log
->>>>>>> Stashed changes
 
 class FlutterPd(private val context: Context,
                 private val assetPathResolver: AssetPathResolver,
@@ -53,36 +47,6 @@ class FlutterPd(private val context: Context,
         pd.startService(callback)
     }
 
-<<<<<<< Updated upstream
-  override fun openZAsset(assetName: String): Int {
-      //IoUtils.extractZipResource(context.getResources().openRawResource(R.raw.assetName), patchDir, true);
-      try {
-        val patchDir = File(context.cacheDir, "flutter_pd").also { if (!it.exists()) it.mkdirs() }
-        val tmpFile = File(patchDir, "tmp.pd")
-        context.assets.open(assetPathResolver.resolve(assetName)).use {
-          it.copyTo(tmpFile.outputStream())
-        }
-        return pd.openPatch(tmpFile)
-      } catch (e: IOException) {
-        throw PdException("openAsset failed", e.message)
-      }
-    }
-
-  override fun close(patchHandle: Int) {
-    pd.closePatch(patchHandle)
-  }
-
-  override fun startAudio(requireInput: Boolean) {
-    if (pd.isRunning.not()) {
-      throw PdException("PdService is not started", "call start() first.")
-    }
-
-    return try {
-      pd.initAudio(requireInput)
-      pd.startAudio()
-    } catch (e: Exception) {
-      throw PdException("startAudio failed", e.message, null)
-=======
     override fun stopPd() {
         if (pd.isRunning) {
             pd.stopService()
@@ -104,7 +68,6 @@ class FlutterPd(private val context: Context,
 
     override fun close(patchHandle: Int) {
         pd.closePatch(patchHandle)
->>>>>>> Stashed changes
     }
 
     override fun startAudio(requireInput: Boolean) {

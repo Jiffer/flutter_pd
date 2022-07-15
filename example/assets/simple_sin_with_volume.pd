@@ -1,0 +1,9 @@
+#N canvas 1236 466 550 489.063 10;
+#X obj 30 50 osc~ 440;
+#X obj 30 100 *~;
+#X obj 30 150 dac~;
+#X obj 90 50 receive volume;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 1 1;

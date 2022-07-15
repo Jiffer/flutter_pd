@@ -27,17 +27,10 @@ interface Pd {
      */
     fun stopService()
 
-<<<<<<< Updated upstream
-  /**
-   * Initialize audio. If microphone is required to run patch, set [requireInput] to true.
-   */
-  fun initAudio(requireInput: Boolean)
-=======
     /**
      * Initialize audio. If microphone is required to run patch, set [requireInput] to true.
      */
     fun initAudio(requireInput: Boolean)
->>>>>>> Stashed changes
 
     /**
      * Start audio processing.

@@ -14,17 +14,9 @@ interface DartToNative {
 
     fun openAsset(assetName: String): Int
 
-<<<<<<< Updated upstream
-  fun openZAsset(assetName: String): Int
-
-  fun close(patchHandle: Int)
-
-  fun startAudio(requireInput: Boolean)
-=======
     fun close(patchHandle: Int)
 
     fun startAudio(requireInput: Boolean)
->>>>>>> Stashed changes
 
     fun send(receiver: String, value: Float)
 

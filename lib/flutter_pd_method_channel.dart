@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_pd/pd_event.dart';
-import 'package:flutter_pd/pd_file_handle.dart';
 
 import 'flutter_pd_platform_interface.dart';
+import 'pd_event.dart';
+import 'pd_file_handle.dart';
 
 /// An implementation of [FlutterPdPlatform] that uses method channels.
 class MethodChannelFlutterPd extends FlutterPdPlatform {
@@ -11,7 +11,6 @@ class MethodChannelFlutterPd extends FlutterPdPlatform {
   @visibleForTesting
   final methodChannel = const MethodChannel('flutter_pd/method');
   final eventChannel = const EventChannel('flutter_pd/event');
-
 
   /// identifier for [receive].
   int _receiveId = 0;
@@ -24,8 +23,16 @@ class MethodChannelFlutterPd extends FlutterPdPlatform {
 
   @override
   Future<void> startPd() {
-    print("calling methodChannel on startPd address");
     return methodChannel.invokeMethod('startPd');
+  }
+
+  @override
+  Future<void> restartAudio(
+    bool requestInput ) {
+    return methodChannel.invokeMethod('startAudio', {
+      'requireInput': requestInput,
+      'restart': true,
+    });
   }
 
   @override
@@ -63,6 +70,7 @@ class MethodChannelFlutterPd extends FlutterPdPlatform {
     });
   }
 
+  @override
   Future<void> send(String receiverName, double value) {
     return methodChannel.invokeMethod('send', {
       'receiver': receiverName,
@@ -74,12 +82,11 @@ class MethodChannelFlutterPd extends FlutterPdPlatform {
   Stream<PdEvent> receive(String symbol) {
     return eventChannel
         .receiveBroadcastStream({
-      'symbol': symbol,
-      'id': _receiveId++,
-    })
+          'symbol': symbol,
+          'id': _receiveId++,
+        })
         .map(PdEvent.fromNativeEvent)
         .where((e) => e != null)
         .cast();
   }
-
 }

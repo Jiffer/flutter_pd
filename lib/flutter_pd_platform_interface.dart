@@ -1,8 +1,8 @@
-import 'package:flutter_pd/pd_event.dart';
-import 'package:flutter_pd/pd_file_handle.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'flutter_pd_method_channel.dart';
+import 'pd_event.dart';
+import 'pd_file_handle.dart';
 
 abstract class FlutterPdPlatform extends PlatformInterface {
   /// Constructs a FlutterPdPlatform.
@@ -16,7 +16,7 @@ abstract class FlutterPdPlatform extends PlatformInterface {
   ///
   /// Defaults to [MethodChannelFlutterPd].
   static FlutterPdPlatform get instance => _instance;
-  
+
   /// Platform-specific implementations should set this with their own
   /// platform-specific class that extends [FlutterPdPlatform] when
   /// they register themselves.
@@ -25,10 +25,6 @@ abstract class FlutterPdPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-
-  /// identifier for [receive].
-  int _receiveId = 0;
-
   /// Request a permission to access to microphone.
   Future<bool> checkPermission() async {
     throw UnimplementedError('checkPermission() not implemented');
@@ -36,6 +32,10 @@ abstract class FlutterPdPlatform extends PlatformInterface {
 
   Future<void> startPd() {
     throw UnimplementedError('startPd() not implemented');
+  }
+
+  Future<void> restartAudio(bool requestInput) {
+    throw UnimplementedError('restartAudio() not implemented');
   }
 
   Future<void> stopPd() {
@@ -53,7 +53,6 @@ abstract class FlutterPdPlatform extends PlatformInterface {
 
   Future<void> startAudio({bool? requireInput}) {
     throw UnimplementedError('startAudio() not implemented');
-
   }
 
   Future<void> send(String receiverName, double value) {
@@ -63,5 +62,4 @@ abstract class FlutterPdPlatform extends PlatformInterface {
   Stream<PdEvent> receive(String symbol) {
     throw UnimplementedError('checkPermission() not implemented');
   }
-
 }

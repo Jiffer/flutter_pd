@@ -1,22 +1,24 @@
-
-import 'package:flutter_pd/pd_event.dart';
-import 'package:flutter_pd/pd_file_handle.dart';
-
 import 'flutter_pd_platform_interface.dart';
+import 'pd_event.dart';
+import 'pd_file_handle.dart';
+
+export 'pd_event.dart';
+export 'pd_file_handle.dart';
 
 class FlutterPd {
-
-  /// identifier for [receive].
-  int _receiveId = 0;
-
+  FlutterPd._();
+  static final FlutterPd instance = FlutterPd._();
   /// Request a permission to access to microphone.
   Future<bool> checkPermission() async {
     return FlutterPdPlatform.instance.checkPermission();
   }
 
   Future<void> startPd() {
-    print("starting Pd");
     return FlutterPdPlatform.instance.startPd();
+  }
+
+  Future<void> restartAudio(bool requestInput){
+    return FlutterPdPlatform.instance.restartAudio(requestInput);
   }
 
   Future<void> stopPd() {

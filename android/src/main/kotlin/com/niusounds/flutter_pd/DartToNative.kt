@@ -6,21 +6,21 @@ import io.flutter.plugin.common.EventChannel
  * Interface from Dart to native method calls.
  */
 interface DartToNative {
-    fun checkPermission(callback: (Boolean) -> Unit)
+  fun checkPermission(callback: (Boolean) -> Unit)
 
-    fun startPd(callback: () -> Unit)
+  fun startPd(callback: () -> Unit)
 
-    fun stopPd()
+  fun stopPd()
 
-    fun openAsset(assetName: String): Int
+  fun openAsset(assetName: String): Int
 
-    fun close(patchHandle: Int)
+  fun close(patchHandle: Int)
 
-    fun startAudio(requireInput: Boolean)
+  fun startAudio(requireInput: Boolean)
 
-    fun send(receiver: String, value: Float)
+  fun send(receiver: String, value: Float)
 
-    fun onListen(symbol: String, id: Int, callback: (Any) -> Unit)
+  fun onListen(symbol: String, id: Int, callback: (Any) -> Unit)
 
-    fun onCancel(symbol: String, id: Int)
+  fun onCancel(symbol: String, id: Int)
 }

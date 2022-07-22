@@ -1,6 +1,5 @@
-import 'package:flutter_pd/flutter_pd_method_channel.dart';
-
 import 'flutter_pd.dart';
+import 'flutter_pd_method_channel.dart';
 
 class PdFileHandle {
   int get handle => _handle;

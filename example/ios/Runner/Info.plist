@@ -43,5 +43,7 @@
 	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app needs to use microphone for sound input.</string>
 </dict>
 </plist>
